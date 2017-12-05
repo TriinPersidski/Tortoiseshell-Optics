@@ -1,0 +1,119 @@
+html,
+body {
+  Margin: 0;
+  padding: 0;
+  line-height: 1.4;
+  font-family: Helvetica, sans-serif;
+  font-size: 18px;
+}
+
+/* Global */
+.container {
+  width: 960px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+h1 {
+  font-weight: bold;
+  font-size: 2rem;
+  line-height: 1.2rem;
+}
+
+ul {
+ margin: 0;
+ padding: 0;
+}
+
+
+/* Mobile Design first */
+@media only screen and (min-width: 470px) {
+    /* For mobile: */
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+.container {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0;
+}
+
+header {
+  background-color: cadetblue;
+  color: white;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  height: 1.5rem;
+}
+
+header span {
+  display: none;
+}
+
+header img {
+  height: 1.5rem;
+  padding-left: 2rem;
+  padding-right: 1rem;
+}
+
+header nav ul#desktop-nav {
+  display: none;
+}
+
+header img {
+ float: left;
+ }
+
+header nav ul#mobile-nav {
+ float: right;
+ padding-right: 2rem;
+}
+}
+
+/* Tablet design */
+
+@media only screen and (min-width: 768px) {
+  .container {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0;
+  }
+header span {
+  display: inline-block;
+  float: left;
+}
+
+header nav ul#mobile-nav {
+  display: none;
+}
+
+header nav ul#desktop-nav  {
+  float: right;
+  display: inline;
+}
+
+header nav ul#desktop-nav li {
+  display: inline;
+}
+
+header nav ul#desktop-nav li a {
+  text-decoration: none;
+  padding-right: 2rem;
+  padding-bottom: 1rem;
+  color: white;
+  text-align: center;
+}
+}
+
+/* desktop design */
+
+@media only screen and (min-width: 960px) {
+  .container {
+    width: 960px;
+    margin: 0 auto;
+    padding: 0;
+    overflow: hidden;
+  }
