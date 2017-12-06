@@ -13,60 +13,47 @@
 
   <body>
     <header>
-      <div class="container">
-        <div class="branding">
-          <div class="logo">
-            <img src="./resources/images/logo-white.png" alt="logo" />
-          </div>
+      <nav class="nav-container">
+        <div>
+          <img src="./resources/images/logo-white.png" alt="logo" />
           <span>Tortoiseshell Optics</span>
         </div>
-        <nav>
+        <div class="menu">
           <ul id="desktop-nav">
             <li><a href="#services">Services</a></li>
             <li><a href="#products">Products</a></li>
             <li><a href="#services">Contact</a></li>
           </ul>
-          <!-- Mobile nav -->
+    <!-- Mobile nav -->
           <ul id="mobile-nav">
             <li>Menu</li>
           </ul>
-        </nav>
+        </div>
+      </nav>
+      <div class="flex-container">
+        <div class="main-banner">
+          <h1>Don't just look, see.</h1>
+        </div>
       </div>
     </header>
 
     <main>
-      <section id="showcase">
-        <div class="container">
-          <div class="headline">
-            <h1>Don't just look, see.</h1>
-          </div>
-        </div>
-      </section>
-
-      <!-- Services -->
+  <!-- Services -->
       <section id="services">
         <div class="container">
           <div class="boxes">
-            <div class="box exams">
-              <figure>
-                <img src="./resources/images/paper-icon.png" alt="paper"/>
-              </figure>
+            <figure id="exams">
+              <img src="./resources/images/paper-icon.png" alt="paper"/>
               <figcaption>Comprehensive Exams</figcaption>
-            </div>
-
-            <div class="box fittings">
-              <figure>
-                <img src="./resources/images/ruler-icon.png" alt="ruler"/>
-              </figure>
+            </figure>
+            <figure id="ruler">
+              <img src="./resources/images/ruler-icon.png" alt="ruler"/>
               <figcaption>Custom Fittings</figcaption>
-            </div>
-
-            <div class="box delivery">
-              <figure>
-                <img src="./resources/images/truck-icon.png" alt="truck"/>
-              </figure>
+            </figure>
+            <figure id="delivery">
+              <img src="./resources/images/truck-icon.png" alt="truck"/>
               <figcaption>Fast Delivery</figcaption>
-            </div>
+            </figure>
           </div>
         </div>
       </section>
@@ -90,11 +77,8 @@
     </main>
 
     <footer>
-      <div class="footer">
-        <img src="./resources/images/logo-black.png" alt="logo-black"/>
-        <span>Copyright Tortoiseshell Optics</span>
-
-      </div>
+      <img src="./resources/images/logo-black.png" alt="logo-black"/>
+      <span>Copyright Tortoiseshell Optics</span>
     </footer>
   </body>
 </html>

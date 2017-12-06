@@ -1,6 +1,6 @@
 html,
 body {
-  Margin: 0;
+  margin: 0;
   padding: 0;
   line-height: 1.4;
   font-family: Helvetica, sans-serif;
@@ -10,7 +10,7 @@ body {
 
 /* Global */
 .container {
-  width: 960px;
+  max-width: 960px;
   margin: 0 auto;
   overflow: hidden;
 }
@@ -38,20 +38,18 @@ body {
 
 .container {
   width: 100%;
-  margin: 0 auto;
-  padding: 0;
 }
 
-header {
+header .nav-container {
   background-color: cadetblue;
   color: white;
   padding-top: 1rem;
   padding-bottom: 1rem;
-  height: 1.5rem;
   width: 100%;
-  position: fixed;
-  z-index: 2;
-
+  height: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 header span {
@@ -68,18 +66,14 @@ header nav ul#desktop-nav {
   display: none;
 }
 
-header img {
- float: left;
- }
 
 header nav ul#mobile-nav {
- float: right;
- padding-right: 2rem;
+  padding-right: 2rem;
 }
 
-/* Showcase */
+/* Main-banner MOBILE */
 
-#showcase {
+header {
   background-image: url("../images/glasses-bg.png");
   background-color: coralblue;
   background-repeat: no-repeat;
@@ -87,39 +81,110 @@ header nav ul#mobile-nav {
   background-size: cover;
   color: white;
   height: 17rem;
-  position: relative;
   width: 100%;
   clear: both;
-  z-index: 1;
 }
 
-.headline {
+h1 {
   font-size: 1rem;
   color: black;
   background-color: white;
   padding: 1rem 0;
-  position: fixed;
-  margin-top: 11.5rem;
+  position: relative;
+  top: 9rem;
   width: 100%;
+  height: auto;
   text-align: center;
   text-transform: uppercase;
 }
 
-/* Services section */
+/* Services section MOBILE*/
 
+.boxes {
+  margin-top: 3.77rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
+.box {
+  padding-bottom: 1.54rem;
+  display: flex;
+}
 
-/* Tablet design */
+.box img {
+  width: 80%;
+  padding-left: 1rem;
+  margin: 0;
+}
+
+figcaption {
+  font-size: 0.77rem;
+  text-align: center;
+  font-weight: bold;
+  padding-bottom: 1.2rem;
+  padding-top: 1rem;
+}
+
+/* About Us MOBILE */
+
+#about .info {
+  width: 100%;
+  margin-top: 3.77rem;
+}
+
+#about .info h2 {
+  background-color: cadetblue;
+  color: white;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 1rem;
+  text-align: center;
+  padding: 0.5rem 0;
+}
+
+#about .info p {
+  padding-top: 1rem;
+  padding-bottom: 4rem;
+  padding-left: 1rem;
+  width: 95%;
+  font-size: 0.77rem;
+}
+
+/* Footer Mobile */
+
+footer {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+  background-color: azure;
+  color: black;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+footer span {
+  display: none;
+}
+
+footer img {
+  height: 1.5rem;
+}
+
+/* TABLET DESIGN */
 
 @media only screen and (min-width: 768px) {
   .container {
-    width: 100%;
-    margin: 0 auto;
-    padding: 0;
-  }
+  width: 100%;
+  margin: 0 auto;
+  padding: 0;
+}
+
 header span {
   display: inline-block;
-  float: left;
 }
 
 header nav ul#mobile-nav {
@@ -127,7 +192,6 @@ header nav ul#mobile-nav {
 }
 
 header nav ul#desktop-nav  {
-  float: right;
   display: inline;
 }
 
@@ -143,62 +207,174 @@ header nav ul#desktop-nav li a {
   text-align: center;
 }
 
-#showcase {
+header {
   height: 22rem;
-  position: fixed;
   width: 100%;
   clear: both;
-  z-index: 1;
 }
 
-.headline {
+.main-banner h1 {
   font-size: 1.33rem;
   padding: 0.75rem 4rem;
   position: relative;
-  margin-top: 7.5rem;
+  top: 5rem;
   float: right;
   margin-right: 2rem;
   width: auto;
 }
+
+/* Services section TABLET*/
+.boxes {
+  width: 100%;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: stretch;
 }
 
-/* desktop design */
+figure {
+  margin-left: 3rem;
+  margin-right: 3rem;
+  max-height: 8rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.boxes img {
+  padding-bottom: 1rem;
+}
+
+#exams img {
+  max-width: 3.5rem
+}
+
+#ruler img {
+  max-width: 5rem;
+}
+
+#delivery img {
+  max-width: 4.8rem;
+}
+
+figcaption {
+  font-size: 1rem;
+  width: auto;
+  text-align: center;
+}
+
+/* About section Tablet */
+
+#about .info {
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+#about .col {
+  width: 50%;
+  margin-right: 5%;
+}
+
+#about .info h2 {
+  background-color: cadetblue;
+  color: white;
+  width: 10rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 1rem;
+  text-align: left;
+  padding: 0.5rem 0 0.5rem 1.25rem;
+}
+
+#about .info p {
+  padding-top: 1rem;
+  padding-bottom: 5rem;
+  width: 100%;
+  font-size: 1rem;
+}
+
+/* Footer Tablet */
+
+footer {
+  max-width: 960px;
+  text-align: left;
+  margin: 0 auto;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+footer span {
+  display: inline-block;
+}
+
+footer img {
+  height: 1.5rem;
+  padding-left: 4rem;
+  padding-right: 1rem;
+}
+}
+
+/* DESKTOP DESIGN */
 
 @media only screen and (min-width: 960px) {
   .container {
-    width: 960px;
+    width: 100%;
     margin: 0 auto;
     padding: 0;
     overflow: hidden;
-  }
-
-  header {
-    position: relative;
-    margin: 0 auto;
-    width: 960px;
-    margin-top: 1rem;
-    z-index: 2;
-  }
-
-  #showcase {
-    height: 31rem;
-    top: 0;
-
-  }
-
-  .headline {
-    font-size: 2rem;
-    padding: 1.5rem 5rem;
-    position: relative;
-    margin-top: 12.5rem;
-    text-align: center;
-    margin-right: 0;
-    /* 2rem from right not positioned yet */
-    }
-
-/* Services section */
-
-.boxes {
-  margin-top: 31rem;
 }
+
+header {
+    height: 31rem;
+    margin-top: 0;
+    padding-top: 1rem; /* sets nav container 1rem lower on desktop  */
+}
+
+header .nav-container {
+  top: 1rem;
+  width: 960px;
+  margin: 0 auto;
+}
+
+.flex-container {
+  width: 85%;
+  margin-right: -2rem; /* 2rem from right, not exactly right but pretty close */
+}
+
+.main-banner {
+  position: relative;
+  line-height: 1.2;
+  top: 10rem;
+}
+
+h1 {
+  font-size: 2rem;
+  font-weight: bold;
+  padding: 1.5rem 5rem;
+  text-align: center;
+}
+
+/* Services section DESKTOP */
+
+/* About section DESKTOP */
+
+#about .info {
+  width: 100%;
+  margin: 0 auto;
+}
+
+#about .col {
+  width: 35%;
+  margin-right: 5%;
+}
+
+#about .info p {
+  padding-left: 0;
+  }
 }
